@@ -47,7 +47,7 @@ void setup(){
   y = 'Y';
 
   //Movimiento de letras
-  posX=640;
+  //posX=640;
   posDirected=520;
   posShane=520;
 }
