@@ -8,7 +8,7 @@ PImage fondo;
 //Creditos texto
 char a,b,c,d,e,g,h,i,j,k,l,m,n,o,p,r,s,t,y;
 //Movimiento texto en X
-float posX;
+//float posX;
 float posDirected,posShane;
 //Rayos
 float inicioRayo;
@@ -98,7 +98,7 @@ void draw(){
   //text( "DIRECTED BY", width/4,height/2, width/2, -frameCount);
   //text("SHANE ACKER", width/4,height/2+40, width/2,-frameCount);
   
-  text(a, height/13,valory);
+  
 
   
   //-----------------------------------------------------------------
@@ -108,7 +108,7 @@ void draw(){
   stroke(255,97);
   line(*/
   //Actualizacion
-  posX=posX-0.2;
+  //posX=posX-0.2;
   posDirected=posDirected-2;
   posShane=posShane-1.7;
 }
