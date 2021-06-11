@@ -327,7 +327,7 @@ void draw() {
   }
  //-----------------------------------------------------------------
   
- if(millis() - tiempo >4750 && millis() <7000|| millis() - tiempo >9750 && millis() - tiempo <12250 || millis() - tiempo >15000 && millis() - tiempo <17500 || millis() - tiempo >20000 && millis() - tiempo <22750 || millis() - tiempo >25000 && millis() - tiempo <28000){
+ if(millis() - tiempo >4750 && millis() - tiempo <7000|| millis() - tiempo >9750 && millis() - tiempo <12250 || millis() - tiempo >15000 && millis() - tiempo <17500 || millis() - tiempo >20000 && millis() - tiempo <22750 || millis() - tiempo >25000 && millis() - tiempo <28000){
  //Rayo1
  noFill();
  strokeWeight(random(0.1,7));
