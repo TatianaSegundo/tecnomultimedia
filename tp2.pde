@@ -3,6 +3,7 @@ TP n°2 : Créditos
 Comisión: 2
 Alumna: Tatiana Dulce Itatí Segundo
 Legajo: 88878/8
+Película: 9
 */
 PFont fuente; //Texto
 PImage fondo;
@@ -30,7 +31,7 @@ float posScreenplay, posPamela;
 float posStory, posShane2;
 float posProd, posTim;
 float posCoP,posJinko;
-int pantalla;
+int pantalla,  tiempo;
 
 void setup() {
   size(1280, 720);
@@ -87,7 +88,7 @@ void setup() {
   u = 'U';
   y = 'Y';
 
-  //Movimiento de letras:
+  //Movimientos:
   posDirected=520;
   posShane=540;
   posScreenplay=520;
@@ -99,66 +100,66 @@ void setup() {
   posCoP=520;
   posJinko=540;
   pantalla=0;
-  
-}
+  tiempo=0;
+  }
 void draw() {
   
  //Fondos inicio:
  
- if(millis()<250){
+  if(millis() - tiempo <250){
    image(c1,0,0);
- }
- else if(millis()<500){
+  }
+  else if(millis() - tiempo <500){
    image(c2,0,0);
- }
- else if(millis()<750){
+  }
+  else if(millis() - tiempo <750){
    image(c3,0,0);
- }
- else if(millis()<1000){
+  }
+  else if(millis() - tiempo <1000){
    image(c4,0,0);
- }
- else if(millis()<1250){
+  }
+  else if(millis() - tiempo <1250){
    image(c5,0,0);
- }
- else if(millis()<1500){
+  }
+  else if(millis() - tiempo <1500){
    image(c6,0,0);
- }
-  else if(millis()<1750){
+  }
+  else if(millis() - tiempo <1750){
     image(c7,0,0);
- }
- else if(millis()<2000){
+  }
+  else if(millis() - tiempo <2000){
   image(c8,0,0);
- }  
- else if(millis()<2250){
+  }  
+  else if(millis() - tiempo <2250){
    background(0);
- } 
-  else if(millis()<2500){
+  } 
+  else if(millis() - tiempo <2500){
    image(f1,0,0);
   }
   
-  else if(millis()<3000){
+  else if(millis() - tiempo <3000){
    image(f2,0,0);
   }
-  else if(millis()<3250){
+  else if(millis() - tiempo <3250){
    image(f3,0,0);
   }
-  else if(millis()<3500){
+  else if(millis() - tiempo <3500){
    image(f4,0,0);
   }
-  else if(millis()<3750){
+  else if(millis() - tiempo <3750){
    image(f5,0,0);
   }
-  else if(millis()<4000){
+  else if(millis() - tiempo <4000){
    image(f6,0,0);
   }
-  else if(millis()<4250){
+  else if(millis() - tiempo <4250){
    image(f7,0,0);
   }
-  else if(millis()<4500){
+  else if(millis() - tiempo <4500){
    image(f8,0,0);
   }  
  //Fondo principal:
-  if(millis()>4750){
+  if(millis() - tiempo >4750){
   image(fondo, 0, 0);
   }
 
@@ -170,7 +171,7 @@ void draw() {
   
   //Directed by
 
- if(millis()>4750){
+ if(millis() - tiempo >4750){
   posDirected=posDirected-2;
   posShane=posShane-1.8;
   text(d, width/2-100, posDirected-18);
@@ -197,7 +198,7 @@ void draw() {
   text(k, width/2+60, posShane-36);
   text(e, width/2+80, posShane-22);
   text(r, width/2+100, posShane-22);
- }
+  }
   if (posDirected < pantalla && posShane < pantalla) {
 
   posScreenplay=posScreenplay-2;
@@ -326,13 +327,17 @@ void draw() {
   }
  //-----------------------------------------------------------------
   
- if(millis() >4750 && millis() <7000|| millis() >9750 && millis() <12250 || millis()>15000 && millis() <17500 || millis()>20000 && millis()<22750 || millis()>25000 && millis()<28000){
+ if(millis() - tiempo >4750 && millis() <7000|| millis() - tiempo >9750 && millis() - tiempo <12250 || millis() - tiempo >15000 && millis() - tiempo <17500 || millis() - tiempo >20000 && millis() - tiempo <22750 || millis() - tiempo >25000 && millis() - tiempo <28000){
  //Rayo1
  noFill();
  strokeWeight(random(0.1,7));
  stroke(#E5FFEB,100);
  beginShape();
  vertex(580,520);
+ vertex(505,460);
+ vertex(510,400);
+ vertex(500,340);
+ vertex(500,390);
  vertex(460,420);
  vertex(440,380);
  vertex(430,280);
@@ -344,7 +349,7 @@ void draw() {
  vertex(280,370);
  vertex(240,360);
  vertex(220,380);
- vertex(160,340);
+ vertex(160,300);
  vertex(120,420);
  endShape();
  //________________________________________________________________
@@ -364,6 +369,8 @@ void draw() {
  vertex(1060,360);
  vertex(1100,340);
  vertex(1160,240);
+ vertex(1190,300);
+ vertex(1150,380);
  vertex(1180,460);
  vertex(1200,480);
  endShape();
@@ -380,8 +387,8 @@ void draw() {
  vertex(740,360);
  vertex(700,300); 
  vertex(740,280);
- vertex(720,180);
- vertex(740,240);
+ vertex(700,180);
+ vertex(740,230);
  vertex(760,280);
  vertex(800,220);
  vertex(750,360);
@@ -397,12 +404,22 @@ void draw() {
  //________________________________________________________________  
  println(millis());
  println(millis()/1000);
-}
+ }
 
  void mouseClicked(){
  
  if(dist(mouseX,mouseY,1240,680)< 20){
-  setup();
- 
+    posDirected=520;
+    posShane=540;
+    posScreenplay=520;
+    posPamela=540;
+    posStory=520;
+    posShane2=540;
+    posProd=520;
+    posTim=540;
+    posCoP=520;
+    posJinko=540;
+    pantalla=0;
+    tiempo=millis();
  } 
  }
