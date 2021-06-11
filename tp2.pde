@@ -160,7 +160,7 @@ void draw() {
   }  
  //Fondo principal:
   if(millis() - tiempo >4750){
-  image(fondo, 0, 0);
+  image(fondo, -1, -1);
   }
 
   //Texto (propiedades):
