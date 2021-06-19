@@ -219,21 +219,21 @@ void draw() {
   text(b, width/2+100, posScreenplay-23);
   text(y, width/2+120, posScreenplay-34);
 
- //Pamela Pettler
-  text(p,width/2-120,posPamela-25);
-  text(a,width/2-100,posPamela-15);
-  text(m,width/2-80,posPamela-13);
-  text(e,width/2-60,posPamela-27);
-  text(l,width/2-40,posPamela-15);
-  text(a,width/2-20,posPamela-22);
+  //Pamela Pettler
+  text(p,width/2-130,posPamela-25);
+  text(a,width/2-110,posPamela-15);
+  text(m,width/2-90,posPamela-13);
+  text(e,width/2-70,posPamela-27);
+  text(l,width/2-50,posPamela-15);
+  text(a,width/2-30,posPamela-22);
   
-  text(p,width/2,posPamela-32);
-  text(e,width/2+20,posPamela-21);
-  text(t,width/2+40,posPamela-15);
-  text(t,width/2+60,posPamela-31);
-  text(l,width/2+80,posPamela-15);
-  text(e,width/2+100,posPamela-28);
-  text(r,width/2+120,posPamela-31);
+  text(p,width/2+10,posPamela-32);
+  text(e,width/2+30,posPamela-21);
+  text(t,width/2+50,posPamela-15);
+  text(t,width/2+70,posPamela-31);
+  text(l,width/2+90,posPamela-15);
+  text(e,width/2+110,posPamela-28);
+  text(r,width/2+130,posPamela-31);
   
   }
   if (posScreenplay < pantalla && posPamela < pantalla) {
