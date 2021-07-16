@@ -1,5 +1,5 @@
-/*Holis a quien mire el trabajo jajaj. Claramente no es un trabajo terminado, me disculpo por eso, pero me propuse seguir corrigiéndolo, ya que le faltan cosas y pulir
-muchas otras, pero les dejo una de mis pruebas sobre el tp. Ya que estamos, felices vacaciones y nos vemos en unas semanas! Saludos*/
+/*Holis a quien mire el trabajo jajaj. Claramente no es un trabajo terminado, me disculpo por eso, pero me propuse seguir corrigiéndolo, ya que me falta tomar unas cuantas
+decisiones, cambiar cosas y mejorar muchas otras, pero les dejo una de mis pruebas sobre el tp como un registro. Ya que estamos, felices vacaciones y nos vemos en unas semanas! Saludos*/
 float esfX, esfY;
 int cant,tam;
 //COLOR
@@ -28,8 +28,8 @@ c4 = color(205,99,10);
 void draw(){
 color vC = color(278,99,99);
 color cC = color(205,99,99);
-color vO = color(278,99,10);//#590086
-color cO = color(205,99,10);//#004D86
+color vO = color(278,99,10);
+color cO = color(205,99,10);
 color paletaA = lerpColor(vC,cC,0.1);
 color paletaB = lerpColor(cC,cO,0.1);
   for(int a=cant; a>0; a--){
