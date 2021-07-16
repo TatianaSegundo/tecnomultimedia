@@ -1,3 +1,5 @@
+/*Holis a quien mire el trabajo jajaj. Claramente no es un trabajo terminado, me disculpo por eso, pero me propuse seguir corrigiéndolo, ya que le faltan cosas y pulir
+muchas otras, pero les dejo una de mis pruebas sobre el tp. Ya que estamos, felices vacaciones y nos vemos en unas semanas! Saludos*/
 float esfX, esfY;
 int cant,tam;
 //COLOR
