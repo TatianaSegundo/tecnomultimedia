@@ -1,49 +1,65 @@
 //Alumna: Tatiana Dulce Itatí Segundo
-
+/*Las líneas comentadas de color, son otra opción en la que trabajé los colores. Dejé la configuración por defecto pero es posible ver mi trabajo con la primer versión, en la que establecí los
+ límites de HSB en (360,100,100);*/
 int num;
 float rMap;
 
 void setup() { 
   size(700, 900);
-  background(0);
   ellipseMode(CENTER);
-  colorMode(HSB, 360, 100, 100);
+  colorMode(HSB);
+  //colorMode(HSB, 360, 100, 100);
   num = 1;
   smooth();
 }
 void draw() {
- //Insertar código para la puerta(faltan detalles)
- //Área provisoria p/ visibilizar botón(picaporte)
- noStroke();
- fill(255);
- circle(600,450,100);
-  if (dist(mouseX, mouseY, 600, height/2)<50) {
+  
+  //Puerta:
+  
+  background(0, 0, 250);
+  noFill();
+  stroke(0, 0, 220);
+  //stroke(0, 0, 90);
+  strokeWeight(1);
+  rect(100, 100, 500, 700);
+  fill(0, 0, 200);
+  //fill(0, 0, 70);
+  circle(100, height/2, 100);
+
+  //Ilusión:
+
+  noStroke();
+  if (dist(mouseX, mouseY, 100, height/2)<50) {
     for (int i = 2000; i > 0; i-=2000/num) {
-      noStroke();
       for ( int iRell = 0; iRell < 10; iRell++) {
         rMap = map(iRell*i/5, 0, 2000, 0, 1);
-        color inicio = color(249, 99, 99);
-        color fin = color(321, 99, 97);
+        // color inicio = color(249, 99, 85);
+        //color fin = color(321, 99, 85);
+        color inicio = color(180, 255, 200);
+        color fin = color(205, 255, 235);
         fill(lerpColor(inicio, fin, rMap));
-        circle(width/2, height/2-80, i-iRell*4);
 
         if (key == 'a') {
           rMap = map(iRell*i/5, 0, 2000, 1, 0);
           fill(lerpColor(inicio, fin, rMap));
-          circle(width/2, height/2-80, i-iRell*4);
         } else if ( key == 'b') {
-          fill(lerpColor(color(360, 99, 99), color(249, 99, 99), rMap));
-          circle(width/2, height/2-80, i-iRell*4);
+          //fill(lerpColor(color(360, 99, 99), color(180, 99, 99), rMap));
+          fill(lerpColor(color(255, 255, 255), color(127, 255, 255), rMap));
         }
+
+        circle(width/2, height/2-80, i-iRell*4);
       }
     }
-    num++;
+    if (num<50) {
+      num++;
+    }
+    println(num);
   }
 }
+//Reset:
+
 void keyPressed() {
   if (key== 'r') {
-
-    rMap = 0;
     num =1;
   }
 }
