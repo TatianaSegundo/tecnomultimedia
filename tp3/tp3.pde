@@ -1,5 +1,5 @@
 //Alumna: Tatiana Dulce Itatí Segundo
-//https://www.youtube.com/watch?v=JLm6URXiEp8 (Disculpe los 3 minutos, pero es el mejor intento)
+//https://youtu.be/C4Lb4PYml98 (Disculpe los 3 minutos, pero es el mejor intento)
 /*Las líneas comentadas de color, son otra opción en la que trabajé los colores. Dejé la configuración por defecto pero es posible ver mi trabajo con la primer versión, en la que establecí los
  límites de HSB en (360,100,100); vale aclarar, que el uso del color acá no es exactamente igual, ya que con la versión final jugué un poco más con el brillo y varié un poco los colores.*/
 int num;
