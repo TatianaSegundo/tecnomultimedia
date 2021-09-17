@@ -21,7 +21,6 @@ void setup() {
   }
 }
 void draw() {
-  background(0);
 
   if (pantalla== "pantalla 0") {
     //muestro pantalla cero
@@ -49,8 +48,6 @@ void draw() {
 }
 
 void mousePressed() {
-  background(0);
-
   if (pantalla== "pantalla 0"){
     if((mouseX > 450) && (mouseX < 200) &&
     (mouseY > 460) && (mouseY < 50)) {
