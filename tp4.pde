@@ -1,3 +1,6 @@
+//TP 4 - Aventura gráfica
+//Alumna: Tatiana Segundo
+//Link de Youtube: https://youtu.be/OTHPumpTY-Q
 PFont fuenteBoton;
 PImage tiza;
 PImage fondo [] = new PImage [13];
