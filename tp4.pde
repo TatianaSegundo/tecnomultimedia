@@ -1,6 +1,3 @@
-//TP 4 - Aventura gráfica
-//Alumna: Tatiana Segundo
-//Link de Youtube: https://youtu.be/OTHPumpTY-Q
 PFont fuenteBoton;
 PImage tiza;
 PImage fondo [] = new PImage [13];
@@ -249,7 +246,7 @@ void mouseClicked() {
       pantalla=12;
     }
     if ( mouseX>(width/4*3-100) && mouseX<(width/4*3+100) && mouseY>(height/4*3-22.5) && mouseY<(height/4*3+22.5)) {   /////Si la activo, me saltea las otras pantallas
-      pantalla=0;
+      pantalla=17;
     }
   }
 
