@@ -1,11 +1,10 @@
 class Kirby {
 
   float posX, posY; //Coordenadas
-  float velocidad, direccion;
-  int tam;
+  float velocidad, direccion,tam;
 
   PImage [] kirby = new PImage[3];
-  Kirby( float y_, float vel_, int tam_) {
+  Kirby( float y_, float vel_, float tam_) {
     posX = 0;
     posY = y_;
     tam = tam_;
@@ -14,7 +13,7 @@ class Kirby {
 
     for (int i = 0; i < 3; i++) {
       kirby[i] = loadImage("kirby0"+ i + ".png");
-      kirby[i].resize(tam_, tam_);
+      kirby[i].resize(int(tam_), int(tam_));
     }
   }
 
